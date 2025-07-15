@@ -1,32 +1,74 @@
-/* Colores personalizados */
+/* Variables de color para Wini Chocolatería */
 :root {
-  --chocolate: #4b2e0f;
-  --chocolate-claro: #a97456;
-  --chocolate-oscuro: #3a220b;
+  --color-chocolate: #6f4e37;
+  --color-chocolate-claro: #a67c52;
+  --color-crema: #f3e9dc;
+  --color-texto: #3e2f25;
 }
 
-/* Fondo y colores generales */
+/* Body y textos */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff8f0;
-  color: var(--chocolate-oscuro);
+  background-color: var(--color-crema);
+  color: var(--color-texto);
   margin: 0;
   padding: 0;
 }
 
-/* Encabezado */
+/* Fondo chocolate header y footer */
 .bg-chocolate {
-  background-color: var(--chocolate) !important;
+  background-color: var(--color-chocolate);
 }
 
-/* Texto color chocolate */
+/* Texto chocolate para títulos */
 .text-chocolate {
-  color: var(--chocolate) !important;
+  color: var(--color-chocolate);
+}
+
+/* Carrusel */
+#carrusel {
+  background-color: #fef9f3; /* Crema muy claro */
+  padding: 2rem 0;
+}
+
+.carrusel-img {
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Productos */
+#productos {
+  background-color: var(--color-crema);
+  padding: 3rem 0;
+  border-top: 4px solid var(--color-chocolate-claro);
+  border-bottom: 4px solid var(--color-chocolate-claro);
+}
+
+/* Tabla productos */
+.table thead {
+  background-color: var(--color-chocolate);
+}
+
+.table thead th {
+  color: #fff;
+  text-align: center;
+}
+
+.table tbody td {
+  vertical-align: middle;
+}
+
+.table-responsive {
+  box-shadow: 0 0 15px rgb(111 78 55 / 0.3);
+  border-radius: 12px;
+  background: #fff;
+  padding: 1rem;
 }
 
 /* Botones personalizados */
 .btn-chocolate {
-  background-color: var(--chocolate);
+  background-color: var(--color-chocolate);
   color: #fff;
   border: none;
   transition: background-color 0.3s ease;
@@ -34,75 +76,46 @@ body {
 
 .btn-chocolate:hover,
 .btn-chocolate:focus {
-  background-color: var(--chocolate-claro);
+  background-color: var(--color-chocolate-claro);
   color: #fff;
-  box-shadow: 0 0 8px var(--chocolate-claro);
 }
 
 .btn-outline-chocolate {
-  color: var(--chocolate);
-  border: 2px solid var(--chocolate);
+  border: 2px solid var(--color-chocolate);
+  color: var(--color-chocolate);
+  background-color: transparent;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-outline-chocolate:hover,
 .btn-outline-chocolate:focus {
-  background-color: var(--chocolate);
+  background-color: var(--color-chocolate);
   color: #fff;
 }
 
-/* Carrusel */
-.carrusel-img {
-  max-height: 500px;
-  object-fit: cover;
-  border-radius: 0.75rem;
+/* Contacto */
+#contacto {
+  background-color: #d6bfa6; /* Marrón claro/beige */
+  padding: 3rem 0;
+  border-radius: 12px;
+  color: var(--color-texto);
 }
 
-/* Tabla Productos */
-table.table {
-  border-collapse: separate;
-  border-spacing: 0 0.75rem;
+/* Footer */
+footer a:hover {
+  text-decoration: underline;
 }
 
-table.table thead tr th {
-  border-radius: 0.5rem 0.5rem 0 0;
-  padding: 1rem;
-}
-
-table.table tbody tr {
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(75, 46, 15, 0.15);
-  transition: transform 0.2s ease;
-}
-
-table.table tbody tr:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(75, 46, 15, 0.25);
-}
-
-/* Pie de página */
-footer.bg-chocolate a {
-  transition: color 0.3s ease;
-}
-
-footer.bg-chocolate a:hover {
-  color: var(--chocolate-claro);
-}
-
-/* Formularios */
-.form-control:focus {
-  border-color: var(--chocolate);
-  box-shadow: 0 0 5px var(--chocolate-claro);
+/* Carousel caption */
+.carousel-caption {
+  bottom: 20px;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
 }
 
 /* Responsive ajustes */
-@media (max-width: 767.98px) {
+@media (max-width: 576px) {
   .carrusel-img {
-    max-height: 300px;
-  }
-
-  header h1 {
-    font-size: 1.75rem;
+    height: 250px;
   }
 }
-
