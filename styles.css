@@ -1,0 +1,121 @@
+/* Variables de color para Wini Chocolatería */
+:root {
+  --color-chocolate: #6f4e37;
+  --color-chocolate-claro: #a67c52;
+  --color-crema: #f3e9dc;
+  --color-texto: #3e2f25;
+}
+
+/* Body y textos */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-crema);
+  color: var(--color-texto);
+  margin: 0;
+  padding: 0;
+}
+
+/* Fondo chocolate header y footer */
+.bg-chocolate {
+  background-color: var(--color-chocolate);
+}
+
+/* Texto chocolate para títulos */
+.text-chocolate {
+  color: var(--color-chocolate);
+}
+
+/* Carrusel */
+#carrusel {
+  background-color: #fef9f3; /* Crema muy claro */
+  padding: 2rem 0;
+}
+
+.carrusel-img {
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Productos */
+#productos {
+  background-color: var(--color-crema);
+  padding: 3rem 0;
+  border-top: 4px solid var(--color-chocolate-claro);
+  border-bottom: 4px solid var(--color-chocolate-claro);
+}
+
+/* Tabla productos */
+.table thead {
+  background-color: var(--color-chocolate);
+}
+
+.table thead th {
+  color: #fff;
+  text-align: center;
+}
+
+.table tbody td {
+  vertical-align: middle;
+}
+
+.table-responsive {
+  box-shadow: 0 0 15px rgb(111 78 55 / 0.3);
+  border-radius: 12px;
+  background: #fff;
+  padding: 1rem;
+}
+
+/* Botones personalizados */
+.btn-chocolate {
+  background-color: var(--color-chocolate);
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-chocolate:hover,
+.btn-chocolate:focus {
+  background-color: var(--color-chocolate-claro);
+  color: #fff;
+}
+
+.btn-outline-chocolate {
+  border: 2px solid var(--color-chocolate);
+  color: var(--color-chocolate);
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-chocolate:hover,
+.btn-outline-chocolate:focus {
+  background-color: var(--color-chocolate);
+  color: #fff;
+}
+
+/* Contacto */
+#contacto {
+  background-color: #d6bfa6; /* Marrón claro/beige */
+  padding: 3rem 0;
+  border-radius: 12px;
+  color: var(--color-texto);
+}
+
+/* Footer */
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Carousel caption */
+.carousel-caption {
+  bottom: 20px;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+}
+
+/* Responsive ajustes */
+@media (max-width: 576px) {
+  .carrusel-img {
+    height: 250px;
+  }
+}
