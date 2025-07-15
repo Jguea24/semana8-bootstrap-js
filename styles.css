@@ -1,8 +1,17 @@
-/* Variables de color */
+/* Colores personalizados */
 :root {
-  --chocolate: #5a2a27;
-  --chocolate-light: #7e3b38;
-  --chocolate-dark: #3d1f1c;
+  --chocolate: #4b2e0f;
+  --chocolate-claro: #a97456;
+  --chocolate-oscuro: #3a220b;
+}
+
+/* Fondo y colores generales */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff8f0;
+  color: var(--chocolate-oscuro);
+  margin: 0;
+  padding: 0;
 }
 
 /* Encabezado */
@@ -10,6 +19,7 @@
   background-color: var(--chocolate) !important;
 }
 
+/* Texto color chocolate */
 .text-chocolate {
   color: var(--chocolate) !important;
 }
@@ -17,77 +27,82 @@
 /* Botones personalizados */
 .btn-chocolate {
   background-color: var(--chocolate);
-  color: white;
+  color: #fff;
   border: none;
   transition: background-color 0.3s ease;
 }
 
 .btn-chocolate:hover,
 .btn-chocolate:focus {
-  background-color: var(--chocolate-dark);
-  color: white;
-  box-shadow: 0 0 8px var(--chocolate-dark);
+  background-color: var(--chocolate-claro);
+  color: #fff;
+  box-shadow: 0 0 8px var(--chocolate-claro);
 }
 
 .btn-outline-chocolate {
   color: var(--chocolate);
   border: 2px solid var(--chocolate);
-  background: transparent;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-outline-chocolate:hover,
 .btn-outline-chocolate:focus {
   background-color: var(--chocolate);
-  color: white;
-  border-color: var(--chocolate-dark);
+  color: #fff;
 }
 
-/* Carrusel: controla altura y que las imágenes se ajusten bien */
+/* Carrusel */
 .carrusel-img {
-  max-height: 450px;
+  max-height: 500px;
   object-fit: cover;
-  width: 100%;
+  border-radius: 0.75rem;
 }
 
-/* Tabla responsiva con scroll y adaptación móvil */
-.table-responsive {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+/* Tabla Productos */
+table.table {
+  border-collapse: separate;
+  border-spacing: 0 0.75rem;
 }
 
-@media (max-width: 576px) {
-  table.table thead {
-    display: none;
-  }
-  table.table tbody tr {
-    display: block;
-    margin-bottom: 1rem;
-    box-shadow: none;
-  }
-  table.table tbody tr td {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-  }
-  table.table tbody tr td::before {
-    content: attr(data-label);
-    font-weight: 700;
-    color: var(--chocolate);
-  }
+table.table thead tr th {
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 1rem;
 }
 
-/* Formulario */
-form input:invalid, form textarea:invalid {
-  border-color: #dc3545;
+table.table tbody tr {
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(75, 46, 15, 0.15);
+  transition: transform 0.2s ease;
+}
+
+table.table tbody tr:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(75, 46, 15, 0.25);
 }
 
 /* Pie de página */
-footer a {
+footer.bg-chocolate a {
   transition: color 0.3s ease;
 }
-footer a:hover {
-  color: var(--chocolate-light);
+
+footer.bg-chocolate a:hover {
+  color: var(--chocolate-claro);
 }
+
+/* Formularios */
+.form-control:focus {
+  border-color: var(--chocolate);
+  box-shadow: 0 0 5px var(--chocolate-claro);
+}
+
+/* Responsive ajustes */
+@media (max-width: 767.98px) {
+  .carrusel-img {
+    max-height: 300px;
+  }
+
+  header h1 {
+    font-size: 1.75rem;
+  }
+}
+

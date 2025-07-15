@@ -19,22 +19,42 @@
   <!-- Encabezado -->
   <header class="bg-chocolate text-white py-3 shadow-sm">
     <div class="container">
-      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-        <h1 class="mb-2 mb-md-0 fs-3 fw-bold">Wini</h1>
-        <nav>
-          <ul class="nav flex-column flex-md-row gap-3">
-            <li class="nav-item"><a class="nav-link text-white fw-semibold" href="#carrusel">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link text-white fw-semibold" href="#productos">Productos</a></li>
-            <li class="nav-item"><a class="nav-link text-white fw-semibold" href="#contacto">Contacto</a></li>
+      <nav class="navbar navbar-expand-md navbar-dark p-0">
+        <a class="navbar-brand fs-3 fw-bold" href="#">Wini</a>
+
+        <!-- Botón hamburguesa para móvil -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarWini"
+          aria-controls="navbarWini"
+          aria-expanded="false"
+          aria-label="Alternar navegación"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menú desplegable -->
+        <div class="collapse navbar-collapse" id="navbarWini">
+          <ul class="navbar-nav ms-auto gap-3">
+            <li class="nav-item">
+              <a class="nav-link text-white fw-semibold" href="#carrusel">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fw-semibold" href="#productos">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fw-semibold" href="#contacto">Contacto</a>
+            </li>
           </ul>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </div>
   </header>
-  <br>
 
   <!-- Carrusel -->
-  <section id="carrusel">
+  <section id="carrusel" class="py-4">
     <div class="container">
       <div id="carouselWini" class="carousel slide rounded-4 shadow-sm" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -95,26 +115,26 @@
           </thead>
           <tbody>
             <tr>
-              <td data-label="Producto">Tableta Clásica</td>
-              <td data-label="Descripción">Chocolate artesanal 70% cacao</td>
-              <td data-label="Precio" class="text-center fw-semibold">$3.00</td>
-              <td data-label="Acción" class="text-center">
+              <td>Tableta Clásica</td>
+              <td>Chocolate artesanal 70% cacao</td>
+              <td class="text-center fw-semibold">$3.00</td>
+              <td class="text-center">
                 <button class="btn btn-chocolate btn-sm">Comprar</button>
               </td>
             </tr>
             <tr>
-              <td data-label="Producto">Bombones de la Amazonía</td>
-              <td data-label="Descripción">Rellenos con frutas exóticas</td>
-              <td data-label="Precio" class="text-center fw-semibold">$5.50</td>
-              <td data-label="Acción" class="text-center">
+              <td>Bombones de la Amazonía</td>
+              <td>Rellenos con frutas exóticas</td>
+              <td class="text-center fw-semibold">$5.50</td>
+              <td class="text-center">
                 <button class="btn btn-chocolate btn-sm">Comprar</button>
               </td>
             </tr>
             <tr>
-              <td data-label="Producto">Granola con Cacao</td>
-              <td data-label="Descripción">Mezcla de granola con nibs de cacao</td>
-              <td data-label="Precio" class="text-center fw-semibold">$4.00</td>
-              <td data-label="Acción" class="text-center">
+              <td>Granola con Cacao</td>
+              <td>Mezcla de granola con nibs de cacao</td>
+              <td class="text-center fw-semibold">$4.00</td>
+              <td class="text-center">
                 <button class="btn btn-chocolate btn-sm">Comprar</button>
               </td>
             </tr>
@@ -173,5 +193,4 @@
   <script src="script.js"></script>
 </body>
 </html>
-
 
